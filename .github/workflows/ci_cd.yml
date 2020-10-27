@@ -40,7 +40,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Pegando ultima versão do código      
+      - name: Pegando ultima versao do codigo      
         uses: actions/checkout@v2 
 
       - name: Configurando Node.js 10.x
