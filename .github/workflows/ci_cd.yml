@@ -34,3 +34,22 @@ jobs:
 
     - name: Rodando testes
       run: npm test
+  
+  Publicacao-DockerHub:
+    needs: Build-Teste
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Pegando ultima versão do código      
+        uses: actions/checkout@v2 
+
+      - name: Configurando Node.js 10.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 10.x        
+
+      - name: Instalando dependencias 
+        run: npm ci
+          
+      - name: Rodando o build
+        run: npm run build --if-present          
