@@ -49,5 +49,6 @@ jobs:
           image: andrewmaia/react_cicd
           tag: latest
           registry: docker.io
+          dockerfile: dockerfile
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}          
