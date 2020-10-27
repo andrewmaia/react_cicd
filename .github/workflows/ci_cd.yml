@@ -54,7 +54,7 @@ jobs:
       - name: Rodando o build
         run: npm run build --if-present   
       
-      -name: Publicação no  DockerHub
+      -name: Publicacao no  DockerHub
        uses: mr-smithers-excellent/docker-build-push@v4
        with:
           image: andrewmaia/react_cicd
